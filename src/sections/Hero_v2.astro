@@ -4,6 +4,7 @@ import Button from "../components/Button.astro";
 import GIDDI from "../assets/logos/giddi-logotype-white.svg";
 import SectionContainer from "../components/SectionContainer.astro";
 import { Icon } from "astro-icon/components";
+import TomoMotion from "../assets/images/giddi-tomo-prostate-massager-come-hither-motion-wide-right-compressed.gif";
 ---
 
 <section class="hero-container relative flex flex-col justify-center">
@@ -54,12 +55,17 @@ import { Icon } from "astro-icon/components";
           </div>
         </div>
       </div>
-      <video class="rounded-3xl shadow-2xl" autoplay muted loop>
+      <!-- <video class="rounded-3xl shadow-2xl" autoplay muted loop>
         <source
           src="https://cdn.shopify.com/videos/c/o/v/341e7ad509c043758cc8732b056cd617.mp4"
           type="video/mp4"
         />
-      </video>
+      </video> -->
+      <Image
+        class="rounded-3xl shadow-2xl"
+        src={TomoMotion}
+        alt="come hither prostate massager toy stimulator vibrator"
+      />
       <div class="md:hidden flex flex-col items-center text-center">
         <div>
           <div class="flex items-center gap-2">
