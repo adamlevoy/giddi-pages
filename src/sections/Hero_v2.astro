@@ -1,0 +1,111 @@
+---
+import { Image } from "astro:assets";
+import Button from "../components/Button.astro";
+import GIDDI from "../assets/logos/giddi-logotype-white.svg";
+import SectionContainer from "../components/SectionContainer.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<section class="hero-container relative flex flex-col justify-center">
+  <div class="w-full">
+    <Image
+      src={GIDDI}
+      alt="giddi logo"
+      class="w-[150px] absolute top-8 left-1/2 -translate-x-1/2"
+    />
+  </div>
+  <SectionContainer>
+    <div class="grid md:grid-cols-2 gap-4 md:gap-12 w-full h-full">
+      <div
+        class="flex flex-col justify-center mt-12 md:mt-0 text-center md:text-left"
+      >
+        <span class="">🥇 #1 Rated Prostate Massage</span>
+        <h1 class="text-6xl font-bold">Hands Free Prostate Massage</h1>
+        <div class="hidden md:block">
+          <div class="mt-8">
+            <div class="flex items-center gap-2">
+              <Icon name="award-trophy" size={30} />
+              <p>Award Winning Prostate Massage</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <Icon name="checkmark-filled" size={30} />
+              <p>Hands Free Stimulation</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <Icon name="checkmark-filled" size={30} />
+              <p>Prolonged Climax</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <Icon name="checkmark-filled" size={30} />
+              <p>Increased Ejaculation</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <Icon name="checkmark-filled" size={30} />
+              <p>Longer-lasting Erections</p>
+            </div>
+          </div>
+          <p class="max-w-prose mt-4">
+            Meet our award-winning prostate massagers and unlock your p-spot
+            with hands-free stimulation, prolonged climax, increased
+            ejaculation, and longer-lasting erections.
+          </p>
+          <div class="mt-12">
+            <Button href="#collection" cta="Take P-Spot Quiz" />
+          </div>
+        </div>
+      </div>
+      <video class="rounded-3xl shadow-2xl" autoplay loop muted>
+        <source
+          src="https://cdn.shopify.com/videos/c/o/v/341e7ad509c043758cc8732b056cd617.mp4"
+          type="video/mp4"
+        />
+      </video>
+      <div class="md:hidden flex flex-col items-center text-center">
+        <div>
+          <div class="flex items-center gap-2">
+            <Icon name="award-trophy" size={30} />
+            <p>Award Winning Prostate Massage</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <Icon name="checkmark-filled" size={30} />
+            <p>Hands Free Stimulation</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <Icon name="checkmark-filled" size={30} />
+            <p>Prolonged Climax</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <Icon name="checkmark-filled" size={30} />
+            <p>Increased Ejaculation</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <Icon name="checkmark-filled" size={30} />
+            <p>Longer-lasting Erections</p>
+          </div>
+        </div>
+        <p class="max-w-prose mt-4">
+          Meet our award-winning prostate massagers and unlock your p-spot with
+          hands-free stimulation, prolonged climax, increased ejaculation, and
+          longer-lasting erections.
+        </p>
+        <div class="mt-8">
+          <Button href="#collection" cta="Take P-Spot Quiz" />
+        </div>
+      </div>
+    </div>
+  </SectionContainer>
+</section>
+
+<style>
+  .hero-container {
+    min-height: 100vh;
+  }
+
+  [data-icon="award-trophy"] {
+    color: goldenrod;
+  }
+
+  video {
+    transform: scaleX(-1);
+  }
+</style>

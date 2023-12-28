@@ -1,0 +1,54 @@
+---
+import ContentMedia from "../components/ContentMedia.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+
+import Thor from "../assets/images/giddi-thor-rotating-prostate-massager-1x1-1.jpg";
+import Tomo from "../assets/images/giddi-tomo-come-hither-prostate-massager-12.jpg";
+import Vulcan from "../assets/images/vulcan-vibrating-prostate-plug-cock-ring-8.jpg";
+import { Icon } from "astro-icon/components";
+---
+
+<SectionContainer>
+  <div class="flex flex-col gap-y-12">
+    <ContentMedia
+      title="Meet Thor"
+      description="360° Rotating Prostate Massager"
+      body="Thor's 360° rotating & vibrating heads deliver multi-sensational prostate stimulation for intense internal and external massage. Anatomical shape and size fits snugly, staying in-place hands-free while giving a sensual feeling of fullness inside you."
+      href="https://mygiddi.com/products/thor-rotating-prostate-massager"
+      cta="Meet Thor"
+      src={Thor}
+      alt="best rotating vibrating prostate massager for men"
+    />
+
+    <ContentMedia
+      title="Meet Tomo"
+      description="Come Hither Prostate Massager"
+      body="Tomo's life-like come hither motion combined with deep vibration delivers dual sensations for mind-blowing internal and external massage. Anatomically designed shape remains in-place for hands-free stimulation and is perfect size for beginner to advanced."
+      href="https://mygiddi.com/products/tomo-come-hither-prostate-massager-remote-control"
+      cta="Meet Tomo"
+      src={Tomo}
+      alt="best come hither vibrating prostate stimulator massager for men"
+      reverseImg={true}
+    />
+    <ContentMedia
+      title="Meet Vulcan"
+      description="Vibrating Prostate Plug & Cockring"
+      body="Our latest addition to the family, Vulcan is our most powerful vibrating plug and is designed for comfortable extended wear. Unique penis and scrotum rings restrict blood flow, leading to stronger, longer-lasting erections."
+      href="https://mygiddi.com/products/vulcan-vibrating-prostate-plug"
+      cta="Meet Vulcan"
+      src={Vulcan}
+      alt="best vibrating prostate plug vibrator for men"
+    />
+  </div>
+</SectionContainer>
+
+<style>
+  [data-icon] {
+    fill: white;
+    margin-inline: auto;
+  }
+
+  /* p {
+    max-width: 50px;
+  } */
+</style>

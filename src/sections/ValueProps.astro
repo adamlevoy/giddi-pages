@@ -1,0 +1,58 @@
+---
+import IconCard from "../components/IconCard.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import { Icon } from "astro-icon/components";
+import Hands from "../assets/icons/hands-free-icon-white.png";
+---
+
+<section>
+  <SectionContainer>
+    <h2 class="text-4xl font-bold text-center">Your Trusted Source</h2>
+    <div
+      class="icon-container | grid sm:grid-cols-2 lg:grid-cols-4 place-items-center gap-8 mt-8"
+    >
+      <IconCard
+        title="Free Standard Shipping"
+        body="Free Standard Shipping on US, CAN, and UK orders over $69. All orders are shipped in non-branded, discrete packaging."
+        icon="truck-outline"
+        size={80}
+      />
+      <IconCard
+        title="Discreet Packaging"
+        body="We respect your privacy and ship all orders in non-branded, discreet boxes or sleeves. No one will know what is inside."
+        icon="package-bold"
+        size={80}
+      />
+      <IconCard
+        title="Friendly Human Service"
+        body="Get help from friendly humans, not robots. Contact us anytime via email or live web chat on desktop during business hours."
+        icon="happy"
+        size={80}
+      />
+      <IconCard
+        title="1-Year Warranty"
+        body="Your order registers you for full GIDDI warranty coverage. This means we will replace faulty products for up to 1 year."
+        icon="shield"
+        size={80}
+      />
+    </div>
+  </SectionContainer>
+</section>
+
+<style>
+  section {
+    display: flex;
+    place-items: center;
+    background-image: url("../assets/images/thor-lifestyle-01.jpg"),
+      linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55));
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 500px;
+  }
+
+  article {
+    border: 1px solid pink;
+  }
+</style>

@@ -1,0 +1,44 @@
+---
+import { Image } from "astro:assets";
+import Button from "../components/Button.astro";
+import GIDDI from "../assets/logos/giddi-logotype-white.svg";
+import SectionContainer from "../components/SectionContainer.astro";
+---
+
+<section
+  class="hero-container relative text-white flex flex-col justify-center"
+>
+  <div class="w-full">
+    <Image
+      src={GIDDI}
+      alt="giddi logo"
+      class="w-[150px] absolute top-8 left-1/2 -translate-x-1/2"
+    />
+  </div>
+  <SectionContainer>
+    <div
+      class="w-full h-full flex flex-col justify-center items-center text-center"
+    >
+      <span class="">🥇 #1 Rated Prostate Massage</span>
+      <h1 class="text-6xl font-bold">Hands Free Prostate Massage</h1>
+      <p class="max-w-prose mt-4">
+        Meet our award-winning prostate massagers and unlock your p-spot with
+        hands-free stimulation, prolonged climax, increased ejaculation, and
+        longer-lasting erections.
+      </p>
+      <div class="mt-12">
+        <Button href="#collection" cta="Explore" />
+      </div>
+    </div>
+  </SectionContainer>
+</section>
+
+<style>
+  .hero-container {
+    background-image: url("../assets/images/thor-model-01.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+  }
+</style>

@@ -1,0 +1,76 @@
+---
+import { Image } from "astro:assets";
+import MH from "../assets/logos/mens-health.png";
+import GR from "../assets/logos/GR_Logo.png";
+import Buzzfeed from "../assets/logos/buzzfeed-logo.png";
+import Wirecutter from "../assets/logos/Wirecutter.png";
+import GQ from "../assets/logos/gq.png";
+import Refinery from "../assets/logos/refinery29-logo.png";
+---
+
+<div class="bg-neutral-50 mx-auto py-12 text-center">
+  <span class="text-2xl font-bold text-gray-950">As seen in</span>
+  <div class="scroller bg-neutral-50">
+    <ul class="logo-list scroller__inner">
+      <li><Image class="w-full" src={MH} alt="mens health logo" /></li>
+      <li><Image src={GR} alt="gadget review logo" /></li>
+      <li><Image src={Buzzfeed} alt="buzzfeed logo" /></li>
+      <li><Image src={Wirecutter} alt="wirecutter logo" /></li>
+      <li><Image src={GQ} alt="GQ logo" class="max-w-[100px]" /></li>
+      <li><Image src={Refinery} alt="refinery 29 logo" /></li>
+    </ul>
+  </div>
+</div>
+
+<script>
+  const scroller = document.querySelector(".scroller");
+
+  if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    addAnimation();
+  }
+
+  function addAnimation() {
+    scroller.setAttribute("data-animated", "true");
+
+    const scrollerInner = scroller.querySelector(".scroller__inner");
+    const scrollerContent = Array.from(scrollerInner.children);
+    scrollerContent.forEach((item) => {
+      const duplicatedItem = item.cloneNode(true);
+      scrollerInner.appendChild(duplicatedItem);
+    });
+  }
+</script>
+
+<style>
+  .scroller {
+    max-width: 1400px;
+    margin-inline: auto;
+  }
+
+  li {
+    max-width: 200px;
+    flex-shrink: 0;
+  }
+
+  .scroller__inner {
+    display: flex;
+    place-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .scroller[data-animated="true"] {
+    overflow: hidden;
+  }
+  .scroller[data-animated="true"] .scroller__inner {
+    width: max-content;
+    flex-wrap: nowrap;
+    animation: scroll 40s linear infinite;
+  }
+
+  @keyframes scroll {
+    to {
+      transform: translate(calc(-50% - 1rem));
+    }
+  }
+</style>

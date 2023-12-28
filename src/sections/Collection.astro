@@ -1,0 +1,112 @@
+---
+import ProductCard from "../components/ProductCard.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import { Icon } from "astro-icon/components";
+import Thor from "../assets/images/thor-rotating-prostate-massager-01.jpg";
+import Tomo from "../assets/images/tomo-come-hither-prostate-massager-02.jpg";
+import Vulcan from "../assets/images/vulcan-vibrating-prostate-plug-cock-ring-4.jpg";
+---
+
+<SectionContainer id="collection">
+  <h2 class="text-5xl text-white font-bold text-center">
+    Award-Winning Prostate Massagers
+  </h2>
+  <div class="grid lg:grid-cols-3 gap-8 mt-8">
+    <ProductCard
+      title="Thor"
+      description="360° Rotating Prostate Massager"
+      body="Thor's 360° rotating & vibrating heads deliver multi-sensational prostate stimulation for intense internal and external massage. Anatomical shape and size fits snugly, staying in-place hands-free while giving a sensual feeling of fullness inside you."
+      src={Thor}
+      alt="best rotating prostate massager vibrator for male anal stimulation"
+      href="https://mygiddi.com/products/thor-rotating-prostate-massager"
+      cta="Meet Thor"
+    >
+      <div class="icon-wrapper | grid grid-cols-3 gap-2 mt-8 text-center">
+        <div
+          class="grid place-items-center bg-neutral-100 shadow-lg rounded-lg p-2"
+        >
+          <Icon name="thor-icons-03" />
+          <p class="text-xs mt-2">3 Rotation Speeds</p>
+        </div>
+        <div
+          class="grid place-items-center bg-neutral-100 shadow-lg rounded-lg p-2"
+        >
+          <Icon name="thor-icons-02" />
+          <p class="text-xs mt-2">16 Vibration Modes</p>
+        </div>
+        <div
+          class="grid place-items-center bg-neutral-100 shadow-lg rounded-lg p-2"
+        >
+          <Icon name="thor-icons-04" />
+          <p class="text-xs mt-2">Powerful Dual Motors</p>
+        </div>
+      </div>
+    </ProductCard>
+    <ProductCard
+      title="Tomo"
+      description="Come Hither Prostate Massager"
+      body="Tomo's life-like come hither motion combined with deep vibration delivers dual sensations for mind-blowing internal and external massage. Anatomically designed shape remains in-place for hands-free stimulation and is perfect size for beginner to advanced."
+      src={Tomo}
+      alt="best come hither prostate massager vibrator stimulator for male anal stimulation"
+      href="https://mygiddi.com/products/tomo-come-hither-prostate-massager-remote-control"
+      cta="Meet Tomo"
+    >
+      <div class="icon-wrapper | grid grid-cols-3 gap-2 mt-8 text-center">
+        <div
+          class="grid place-items-center bg-neutral-100 shadow-lg rounded-lg p-2"
+        >
+          <Icon name="thor-icons-03" />
+          <p class="text-xs mt-2">3 Rotation Speeds</p>
+        </div>
+        <div
+          class="grid place-items-center bg-neutral-100 shadow-lg rounded-lg p-2"
+        >
+          <Icon name="thor-icons-02" />
+          <p class="text-xs mt-2">16 Vibration Modes</p>
+        </div>
+        <div
+          class="grid place-items-center bg-neutral-100 shadow-lg rounded-lg p-2"
+        >
+          <Icon name="thor-icons-04" />
+          <p class="text-xs mt-2">Powerful Dual Motors</p>
+        </div>
+      </div>
+    </ProductCard>
+    <ProductCard
+      title="Vulcan"
+      description="Vibrating Prostate Plug & Cockring"
+      body="Our latest addition to the family, Vulcan is our most powerful vibrating plug and is designed for comfortable extended wear. Unique penis and scrotum rings restrict blood flow, leading to stronger, longer-lasting erections."
+      src={Vulcan}
+      alt="best rotating prostate massager vibrator for male anal stimulation"
+      href="https://mygiddi.com/products/vulcan-vibrating-prostate-plug"
+      cta="Meet Vulcan"
+    >
+      <div class="icon-wrapper | grid grid-cols-3 gap-2 mt-8 text-center">
+        <div
+          class="grid place-items-center bg-neutral-100 shadow-lg rounded-lg p-2"
+        >
+          <Icon name="thor-icons-03" />
+          <p class="text-xs mt-2">3 Rotation Speeds</p>
+        </div>
+        <div
+          class="grid place-items-center bg-neutral-100 shadow-lg rounded-lg p-2"
+        >
+          <Icon name="thor-icons-02" />
+          <p class="text-xs mt-2">16 Vibration Modes</p>
+        </div>
+        <div
+          class="grid place-items-center bg-neutral-100 shadow-lg rounded-lg p-2"
+        >
+          <Icon name="thor-icons-04" />
+          <p class="text-xs mt-2">Powerful Dual Motors</p>
+        </div>
+      </div>
+    </ProductCard>
+  </div>
+</SectionContainer>
+
+<style>
+  [data-icon] {
+    font-size: 3rem;
+  }
+</style>

@@ -1,0 +1,28 @@
+---
+import { Image } from "astro:assets";
+import Button from "./Button.astro";
+const {
+  title,
+  description,
+  body,
+  src,
+  alt,
+  href,
+  cta,
+  reverseImg = false,
+} = Astro.props;
+---
+
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+  {!reverseImg ? <Image src={src} alt={alt} class="rounded-2xl" /> : null}
+  <div class="flex flex-col justify-center p-12">
+    <span class="text-4xl font-bold">{title}</span>
+    <h2 class="text-3xl">{description}</h2>
+    <p class="max-w-prose mt-4">{body}</p>
+    <div class="mt-8">
+      <slot />
+      <Button href={href} cta={cta} />
+    </div>
+  </div>
+  {reverseImg ? <Image src={src} alt={alt} class="rounded-2xl" /> : null}
+</div>

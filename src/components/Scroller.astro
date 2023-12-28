@@ -1,0 +1,126 @@
+---
+import ReviewCard from "./ReviewCard.astro";
+---
+
+<div class="scroller">
+  <div>
+    <ReviewCard
+      name="Tom S."
+      title="Best prostate toy yet!"
+      body="The Thor is great, and the best toy I've ever used. The stimulation is incredible, with both the rotation and vibrations. I used it for about an hour and I was still feeling it a couple of hours later. If you're interested in prostate stimulation, this is definitely the one to get! I would highly recommend it!"
+      product="Thor Rotating Prostate Massager"
+      href="https://mygiddi.com/products/thor-rotating-prostate-massager"
+    />
+  </div>
+  <div>
+    <ReviewCard
+      name="Tom S."
+      title="Best prostate toy yet!"
+      body="The Thor is great, and the best toy I've ever used. The stimulation is incredible, with both the rotation and vibrations. I used it for about an hour and I was still feeling it a couple of hours later. If you're interested in prostate stimulation, this is definitely the one to get! I would highly recommend it!"
+      product="Thor Rotating Prostate Massager"
+      href="https://mygiddi.com/products/thor-rotating-prostate-massager"
+    />
+  </div>
+  <div>
+    <ReviewCard
+      name="Tom S."
+      title="Best prostate toy yet!"
+      body="The Thor is great, and the best toy I've ever used. The stimulation is incredible, with both the rotation and vibrations. I used it for about an hour and I was still feeling it a couple of hours later. If you're interested in prostate stimulation, this is definitely the one to get! I would highly recommend it!"
+      product="Thor Rotating Prostate Massager"
+      href="https://mygiddi.com/products/thor-rotating-prostate-massager"
+    />
+  </div>
+  <div>
+    <ReviewCard
+      name="Tom S."
+      title="Best prostate toy yet!"
+      body="The Thor is great, and the best toy I've ever used. The stimulation is incredible, with both the rotation and vibrations. I used it for about an hour and I was still feeling it a couple of hours later. If you're interested in prostate stimulation, this is definitely the one to get! I would highly recommend it!"
+      product="Thor Rotating Prostate Massager"
+      href="https://mygiddi.com/products/thor-rotating-prostate-massager"
+    />
+  </div>
+  <div>
+    <ReviewCard
+      name="Tom S."
+      title="Best prostate toy yet!"
+      body="The Thor is great, and the best toy I've ever used. The stimulation is incredible, with both the rotation and vibrations. I used it for about an hour and I was still feeling it a couple of hours later. If you're interested in prostate stimulation, this is definitely the one to get! I would highly recommend it!"
+      product="Thor Rotating Prostate Massager"
+      href="https://mygiddi.com/products/thor-rotating-prostate-massager"
+    />
+  </div>
+  <div>
+    <ReviewCard
+      name="Tom S."
+      title="Best prostate toy yet!"
+      body="The Thor is great, and the best toy I've ever used. The stimulation is incredible, with both the rotation and vibrations. I used it for about an hour and I was still feeling it a couple of hours later. If you're interested in prostate stimulation, this is definitely the one to get! I would highly recommend it!"
+      product="Thor Rotating Prostate Massager"
+      href="https://mygiddi.com/products/thor-rotating-prostate-massager"
+    />
+  </div>
+  <div>
+    <ReviewCard
+      name="Tom S."
+      title="Best prostate toy yet!"
+      body="The Thor is great, and the best toy I've ever used. The stimulation is incredible, with both the rotation and vibrations. I used it for about an hour and I was still feeling it a couple of hours later. If you're interested in prostate stimulation, this is definitely the one to get! I would highly recommend it!"
+      product="Thor Rotating Prostate Massager"
+      href="https://mygiddi.com/products/thor-rotating-prostate-massager"
+    />
+  </div>
+  <div>
+    <ReviewCard
+      name="Tom S."
+      title="Best prostate toy yet!"
+      body="The Thor is great, and the best toy I've ever used. The stimulation is incredible, with both the rotation and vibrations. I used it for about an hour and I was still feeling it a couple of hours later. If you're interested in prostate stimulation, this is definitely the one to get! I would highly recommend it!"
+      product="Thor Rotating Prostate Massager"
+      href="https://mygiddi.com/products/thor-rotating-prostate-massager"
+    />
+  </div>
+</div>
+
+<style>
+  .scroller {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 36%;
+    gap: 2rem;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    padding-bottom: 2rem;
+
+    scroll-snap-type: inline mandatory;
+    scroll-behavior: smooth;
+    scroll-padding-inline: 3rem;
+  }
+
+  .scroller > * {
+    scroll-snap-align: start;
+  }
+
+  @media (max-width: 48rem) {
+    .scroller {
+      grid-auto-columns: 75%;
+      gap: 1rem;
+      scroll-padding-inline: 2rem;
+    }
+  }
+
+  /* width */
+  .scroller::-webkit-scrollbar {
+    width: 2rem;
+  }
+
+  /* Track */
+  .scroller::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  .scroller::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+
+  /* Handle on hover */
+  .scroller::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+</style>

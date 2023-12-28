@@ -1,0 +1,89 @@
+---
+import { Image } from "astro:assets";
+import SectionContainer from "../components/SectionContainer.astro";
+import Thor from "../assets/images/thor-rotating-prostate-massager-sans-remote.jpeg";
+import Tomo from "../assets/images/tomo-come-hither-prostate-massager-sans-remote.jpg";
+import Vulcan from "../assets/images/vulcan-vibrating-prostate-plug-cock-ring-4.jpg";
+import ReviewCard from "../components/ReviewCard.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<SectionContainer>
+  <div class="grid md:grid-cols-2">
+    <div>
+      <ReviewCard
+        name="Tom S."
+        title="Best prostate toy yet!"
+        body="The Thor is great, and the best toy I've ever used. The stimulation is incredible, with both the rotation and vibrations. I used it for about an hour and I was still feeling it a couple of hours later. If you're interested in prostate stimulation, this is definitely the one to get! I would highly recommend it!"
+        product="Thor Rotating Prostate Massager"
+        href="https://mygiddi.com/products/thor-rotating-prostate-massager"
+        imgSrc={Thor}
+        alt="best rotating prostate massager vibrator milker for p-spot stimulation"
+      />
+    </div>
+    <div class="grid place-items-center p-6">
+      <div class="relative">
+        <Icon name="quote-right" />
+        <p class="text-4xl font bold max-w-prose text-center italic z-50">
+          "I used it for about an hour and was still feeling it a couple hours
+          later."
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="grid md:grid-cols-2">
+    <div class="grid place-items-center p-6">
+      <div class="relative">
+        <Icon name="quote-right" />
+        <p class="text-4xl font bold max-w-prose text-center italic z-50">
+          "I used it for about an hour and was still feeling it a couple hours
+          later."
+        </p>
+      </div>
+    </div>
+    <div>
+      <ReviewCard
+        name="Tom S."
+        title="Best prostate toy yet!"
+        body="The Thor is great, and the best toy I've ever used. The stimulation is incredible, with both the rotation and vibrations. I used it for about an hour and I was still feeling it a couple of hours later. If you're interested in prostate stimulation, this is definitely the one to get! I would highly recommend it!"
+        product="Thor Rotating Prostate Massager"
+        href="https://mygiddi.com/products/thor-rotating-prostate-massager"
+        imgSrc={Tomo}
+        alt="best rotating prostate massager vibrator milker for p-spot stimulation"
+      />
+    </div>
+  </div>
+  <div class="grid md:grid-cols-2">
+    <div>
+      <ReviewCard
+        name="Tom S."
+        title="Best prostate toy yet!"
+        body="The Thor is great, and the best toy I've ever used. The stimulation is incredible, with both the rotation and vibrations. I used it for about an hour and I was still feeling it a couple of hours later. If you're interested in prostate stimulation, this is definitely the one to get! I would highly recommend it!"
+        product="Thor Rotating Prostate Massager"
+        href="https://mygiddi.com/products/thor-rotating-prostate-massager"
+        imgSrc={Vulcan}
+        alt="best rotating prostate massager vibrator milker for p-spot stimulation"
+      />
+    </div>
+    <div class="grid place-items-center p-6">
+      <div class="relative">
+        <Icon name="quote-right" />
+        <p class="text-4xl font bold max-w-prose text-center italic z-50">
+          "I used it for about an hour and was still feeling it a couple hours
+          later."
+        </p>
+      </div>
+    </div>
+  </div>
+</SectionContainer>
+
+<style>
+  [data-icon="quote-right"] {
+    position: absolute;
+    top: -4rem;
+    right: 0;
+    font-size: 6rem;
+    opacity: 0.3;
+    z-index: 10;
+  }
+</style>

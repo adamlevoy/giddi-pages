@@ -1,0 +1,52 @@
+---
+import IconCard from "../components/IconCard.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+---
+
+<section>
+  <SectionContainer>
+    <h2 class="text-4xl font-bold text-center">
+      Benefits of our Prostate Toys
+    </h2>
+    <div class="icon-container | grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-8">
+      <IconCard
+        title="Hands Free Stimulation"
+        body="Anatomically designed to fit snugly and comfortably, staying in-place for hands-free stimulation and delivering fullness inside you."
+        icon="hands-free"
+        size={80}
+      />
+      <IconCard
+        title="Explosive Climax"
+        body="Customers report increased ejaculation and more intense orgasms as a result of direct prostate stimulation."
+        icon="volcano"
+        size={80}
+      />
+      <IconCard
+        title="Multiple Orgasms"
+        body="Customers attest to multiple orgasms in a single session due to highly targeted, direct prostate stimulation."
+        icon="fireworks"
+        size={80}
+      />
+      <IconCard
+        title="Stronger Erections"
+        body="Direct prostate stimulation increases circulation and fluid flow, leading to stronger and longer-lasting erections over time."
+        icon="erection"
+        size={80}
+      />
+    </div>
+  </SectionContainer>
+</section>
+
+<style>
+  section {
+    display: flex;
+    place-items: center;
+    background-image: url("../assets/images/fist.jpg"),
+      linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55));
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 500px;
+  }
+</style>

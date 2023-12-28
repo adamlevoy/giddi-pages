@@ -1,0 +1,37 @@
+---
+import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
+const { name, timeAgo, title, body, product, href, imgSrc, alt } = Astro.props;
+---
+
+<div
+  class="p-8 rounded-2xl shadow-xl bg-neutral-50 max-w-lg mx-auto text-gray-950 relative"
+>
+  <Image
+    class="absolute -top-8 right-8 max-w-[120px] rounded-full shadow-2xl"
+    src={imgSrc}
+    alt={alt}
+  />
+  <div class="flex items-center gap-2">
+    <p class="font-bold">{name}</p>
+    <Icon name="checkmark-filled" size={18} />
+  </div>
+  <p class="text-xs font-light">Verified Customer</p>
+  <div class="flex items-center gap-x-1 mt-2">
+    <Icon name="star-filled" size={20} />
+    <Icon name="star-filled" size={20} />
+    <Icon name="star-filled" size={20} />
+    <Icon name="star-filled" size={20} />
+    <Icon name="star-filled" size={20} />
+    <p>{timeAgo}</p>
+  </div>
+  <div class="mt-4">
+    <p class="text-xl font-bold text-brown-800">{title}</p>
+    <p class="max-w-prose mb-2">
+      {body}
+    </p>
+    <a class="underline underline-offset-4" href={href} target="_blank"
+      >{product}</a
+    >
+  </div>
+</div>
