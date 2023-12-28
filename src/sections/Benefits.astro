@@ -1,13 +1,12 @@
 ---
 import IconCard from "../components/IconCard.astro";
 import SectionContainer from "../components/SectionContainer.astro";
+import SectionTitle from "../components/SectionTitle.astro";
 ---
 
 <section>
   <SectionContainer>
-    <h2 class="text-4xl font-bold text-center">
-      Benefits of our Prostate Toys
-    </h2>
+    <SectionTitle heading="Benefits of Our Prostate Toys" />
     <div class="icon-container | grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-8">
       <IconCard
         title="Hands Free Stimulation"
@@ -42,7 +41,7 @@ import SectionContainer from "../components/SectionContainer.astro";
     display: flex;
     place-items: center;
     background-image: url("../assets/images/fist.jpg"),
-      linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55));
+      linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
     background-blend-mode: overlay;
     background-repeat: no-repeat;
     background-position: center;

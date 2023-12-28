@@ -1,47 +1,41 @@
 ---
-import { Image } from "astro:assets";
-import Button from "../components/Button.astro";
-import GIDDI from "../assets/logos/giddi-logotype-white.svg";
-import SectionContainer from "../components/SectionContainer.astro";
 import { Icon } from "astro-icon/components";
-import TomoMotion from "../assets/images/giddi-tomo-prostate-massager-come-hither-motion-wide-right-compressed.gif";
+import Header from "../components/Header.astro";
 ---
 
-<section class="hero-container relative flex flex-col justify-center">
-  <div class="w-full">
-    <Image
-      src={GIDDI}
-      alt="giddi logo"
-      class="w-[150px] absolute top-8 left-1/2 -translate-x-1/2"
-    />
-  </div>
-  <SectionContainer>
+<section class="hero-container">
+  <Header />
+  <div class="max-w-screen-xl mx-auto px-3 md:pt-24 pb-24">
     <div class="grid md:grid-cols-2 gap-4 md:gap-12 w-full h-full">
       <div
-        class="flex flex-col justify-center mt-12 md:mt-0 text-center md:text-left"
+        class="flex flex-col justify-center mt-4 md:mt-0 text-center md:text-left"
       >
-        <span class="">🥇 #1 Rated Prostate Massage</span>
-        <h1 class="text-6xl font-bold">Hands Free Prostate Massage</h1>
+        <div class="mb-4">
+          <span class="uppercase">🥇 #1 Rated Prostate Massage</span>
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold">
+            Unlock Mind Blowing Prostate Pleasure
+          </h1>
+        </div>
         <div class="hidden md:block">
-          <div class="mt-8">
+          <div class="mt-8 flex flex-col gap-y-1">
             <div class="flex items-center gap-2">
-              <Icon name="award-trophy" size={30} />
+              <Icon name="award-trophy" />
               <p>Award Winning Prostate Massage</p>
             </div>
             <div class="flex items-center gap-2">
-              <Icon name="checkmark-filled" size={30} />
+              <Icon name="checkmark-filled" />
               <p>Hands Free Stimulation</p>
             </div>
             <div class="flex items-center gap-2">
-              <Icon name="checkmark-filled" size={30} />
+              <Icon name="checkmark-filled" />
               <p>Prolonged Climax</p>
             </div>
             <div class="flex items-center gap-2">
-              <Icon name="checkmark-filled" size={30} />
+              <Icon name="checkmark-filled" />
               <p>Increased Ejaculation</p>
             </div>
             <div class="flex items-center gap-2">
-              <Icon name="checkmark-filled" size={30} />
+              <Icon name="checkmark-filled" />
               <p>Longer-lasting Erections</p>
             </div>
           </div>
@@ -51,7 +45,12 @@ import TomoMotion from "../assets/images/giddi-tomo-prostate-massager-come-hithe
             for you!
           </p>
           <div class="mt-12">
-            <Button href="#collection" cta="Take P-Spot Quiz" />
+            <a
+              href="https://mygiddi.com/tools/perfect-product-finder/quiz#/"
+              target="_blank"
+              class="btn shadow-2xl flex items-center gap-x-2 w-fit"
+              ><span>Find My Match</span> <Icon name="arrow-right" /></a
+            >
           </div>
         </div>
       </div>
@@ -61,55 +60,67 @@ import TomoMotion from "../assets/images/giddi-tomo-prostate-massager-come-hithe
           type="video/mp4"
         />
       </video>
-      <!-- <Image
-        class="rounded-3xl shadow-2xl"
-        src={TomoMotion}
-        alt="come hither prostate massager toy stimulator vibrator"
-        loading="eager"
-      /> -->
-      <div class="md:hidden flex flex-col items-center text-center">
+      <div
+        class="md:hidden flex flex-col items-center text-center text-lg mt-4"
+      >
         <div>
           <div class="flex items-center gap-2">
-            <Icon name="award-trophy" size={30} />
+            <Icon name="award-trophy" />
             <p>Award Winning Prostate Massage</p>
           </div>
           <div class="flex items-center gap-2">
-            <Icon name="checkmark-filled" size={30} />
+            <Icon name="checkmark-filled" />
             <p>Hands Free Stimulation</p>
           </div>
           <div class="flex items-center gap-2">
-            <Icon name="checkmark-filled" size={30} />
+            <Icon name="checkmark-filled" />
             <p>Prolonged Climax</p>
           </div>
           <div class="flex items-center gap-2">
-            <Icon name="checkmark-filled" size={30} />
+            <Icon name="checkmark-filled" />
             <p>Increased Ejaculation</p>
           </div>
           <div class="flex items-center gap-2">
-            <Icon name="checkmark-filled" size={30} />
+            <Icon name="checkmark-filled" />
             <p>Longer-lasting Erections</p>
           </div>
         </div>
-        <p class="max-w-prose mt-4">
+        <!-- <p class="max-w-prose text-lg mt-4">
           Not all prostate massagers are created equal! Take our short quiz to
           find out which of our Award-Winning prostate toys is the best match
           for you!
-        </p>
+        </p> -->
         <div class="mt-8">
-          <Button href="#collection" cta="Find My Match" />
+          <a
+            href="https://mygiddi.com/tools/perfect-product-finder/quiz#/"
+            target="_blank"
+            class="btn shadow-2xl flex items-center gap-x-2 w-fit"
+            ><span>Find My Match</span> <Icon name="arrow-right" /></a
+          >
         </div>
       </div>
     </div>
-  </SectionContainer>
+  </div>
 </section>
 
 <style>
   .hero-container {
     min-height: 100vh;
+    display: grid;
+    grid-template-rows: min-content 1fr;
+    place-items: center;
+  }
+
+  [data-icon] {
+    font-size: 1.5rem;
   }
 
   [data-icon="award-trophy"] {
     color: goldenrod;
+  }
+
+  [data-icon="checkmark-filled"] {
+    color: rgb(var(--color-primary));
   }
 
   video {

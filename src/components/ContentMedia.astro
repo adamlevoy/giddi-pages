@@ -14,8 +14,11 @@ const {
 ---
 
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-  {!reverseImg ? <Image src={src} alt={alt} class="rounded-2xl" /> : null}
-  <div class="flex flex-col justify-center p-12">
+  <div
+    class={reverseImg
+      ? "md:order-2 flex flex-col justify-center p-12"
+      : "flex flex-col justify-center p-12"}
+  >
     <span class="text-4xl font-bold">{title}</span>
     <h2 class="text-3xl">{description}</h2>
     <p class="max-w-prose mt-4">{body}</p>
@@ -24,5 +27,9 @@ const {
       <Button href={href} cta={cta} />
     </div>
   </div>
-  {reverseImg ? <Image src={src} alt={alt} class="rounded-2xl" /> : null}
+  <Image
+    src={src}
+    alt={alt}
+    class={reverseImg ? "md:order-1 rounded-2xl" : "rounded-2xl"}
+  />
 </div>
