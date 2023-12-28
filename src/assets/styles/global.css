@@ -20,7 +20,7 @@
 
   html {
     font-family: system-ui, sans-serif;
-    background: #13151a;
+    background: rgb(19, 21, 26);
     color: rgb(var(--color-white));
     scroll-behavior: smooth;
   }

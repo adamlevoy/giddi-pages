@@ -9,7 +9,7 @@ import { Icon } from "astro-icon/components";
 ---
 
 <SectionContainer>
-  <div class="grid md:grid-cols-2">
+  <div class="grid md:grid-cols-2 grid-rows-[auto]">
     <div>
       <ReviewCard
         name="Tom S."
@@ -22,7 +22,7 @@ import { Icon } from "astro-icon/components";
       />
     </div>
     <div class="grid place-items-center p-6">
-      <div class="relative">
+      <div class="relative my-32 md:my-0">
         <Icon name="quote-right" />
         <p class="text-4xl font bold max-w-prose text-center italic z-50">
           "I used it for about an hour and was still feeling it a couple hours
@@ -32,8 +32,8 @@ import { Icon } from "astro-icon/components";
     </div>
   </div>
   <div class="grid md:grid-cols-2">
-    <div class="grid place-items-center p-6">
-      <div class="relative">
+    <div class="grid place-items-center p-6 order-2 md:order-1">
+      <div class="relative my-32 md:my-0">
         <Icon name="quote-right" />
         <p class="text-4xl font bold max-w-prose text-center italic z-50">
           "I used it for about an hour and was still feeling it a couple hours
@@ -41,7 +41,7 @@ import { Icon } from "astro-icon/components";
         </p>
       </div>
     </div>
-    <div>
+    <div class="order-1 md:order-2">
       <ReviewCard
         name="Tom S."
         title="Best prostate toy yet!"
@@ -66,7 +66,7 @@ import { Icon } from "astro-icon/components";
       />
     </div>
     <div class="grid place-items-center p-6">
-      <div class="relative">
+      <div class="relative my-32 md:my-0">
         <Icon name="quote-right" />
         <p class="text-4xl font bold max-w-prose text-center italic z-50">
           "I used it for about an hour and was still feeling it a couple hours
