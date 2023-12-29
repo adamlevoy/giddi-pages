@@ -15,9 +15,9 @@ const {
 
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
   <div
-    class={reverseImg
-      ? "md:order-2 flex flex-col justify-center p-12"
-      : "flex flex-col justify-center p-12"}
+    class={`${reverseImg ? "md:order-2" : ""}
+    flex flex-col justify-center p-6 md:p-12
+    `}
   >
     <span class="text-4xl font-bold">{title}</span>
     <h2 class="text-3xl italic">{description}</h2>
@@ -30,6 +30,6 @@ const {
   <Image
     src={src}
     alt={alt}
-    class={reverseImg ? "md:order-1 rounded-2xl" : "rounded-2xl"}
+    class={`${reverseImg ? "md:order-1" : ""} rounded-2xl`}
   />
 </div>

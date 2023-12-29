@@ -12,12 +12,16 @@ import Refinery from "../assets/logos/refinery29-logo.png";
   <span class="text-2xl font-bold text-gray-950">As seen in</span>
   <div class="scroller bg-neutral-50">
     <ul class="logo-list scroller__inner">
-      <li><Image class="w-full" src={MH} alt="mens health logo" /></li>
-      <li><Image src={GR} alt="gadget review logo" /></li>
-      <li><Image src={Buzzfeed} alt="buzzfeed logo" /></li>
-      <li><Image src={Wirecutter} alt="wirecutter logo" /></li>
-      <li><Image src={GQ} alt="GQ logo" class="max-w-[100px]" /></li>
-      <li><Image src={Refinery} alt="refinery 29 logo" /></li>
+      <li>
+        <Image loading="eager" class="w-full" src={MH} alt="mens health logo" />
+      </li>
+      <li><Image loading="eager" src={GR} alt="gadget review logo" /></li>
+      <li><Image loading="eager" src={Buzzfeed} alt="buzzfeed logo" /></li>
+      <li><Image loading="eager" src={Wirecutter} alt="wirecutter logo" /></li>
+      <li>
+        <Image loading="eager" src={GQ} alt="GQ logo" class="max-w-[100px]" />
+      </li>
+      <li><Image loading="eager" src={Refinery} alt="refinery 29 logo" /></li>
     </ul>
   </div>
 </div>
