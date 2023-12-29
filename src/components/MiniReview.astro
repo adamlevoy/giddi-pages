@@ -3,7 +3,8 @@ import { Icon } from "astro-icon/components";
 ---
 
 <div
-  class="absolute z-10 bg-neutral-200/50 shadow-sm text-neutral-950 rounded-md p-2 top-4 left-4"
+  class="review-container | absolute z-10 bg-neutral-200/50 shadow-sm text-neutral-950 rounded-md p-2 top-4 left-4"
+  data-order="1"
 >
   <span class="font-xs font-bold">OMG!</span>
   <div class="flex">
@@ -15,7 +16,8 @@ import { Icon } from "astro-icon/components";
   </div>
 </div>
 <div
-  class="absolute z-10 bg-neutral-200/50 shadow-sm text-neutral-950 rounded-md p-2 top-40 left-4"
+  class="review-container | absolute z-10 bg-neutral-200/50 shadow-sm text-neutral-950 rounded-md p-2 top-40 left-4"
+  data-order="2"
 >
   <span class="font-xs font-bold">I love this thing!</span>
   <div class="flex">
@@ -27,7 +29,8 @@ import { Icon } from "astro-icon/components";
   </div>
 </div>
 <div
-  class="absolute z-10 bg-neutral-200/50 shadow-sm text-neutral-950 rounded-md p-2 top-12 right-8"
+  class="review-container | absolute z-10 bg-neutral-200/50 shadow-sm text-neutral-950 rounded-md p-2 top-12 right-8"
+  data-order="3"
 >
   <span class="font-xs font-bold">Best toy ever!</span>
   <div class="flex">
@@ -39,7 +42,8 @@ import { Icon } from "astro-icon/components";
   </div>
 </div>
 <div
-  class="absolute z-10 bg-neutral-200/50 shadow-sm text-neutral-950 rounded-md p-2 bottom-12 right-4"
+  class="review-container | absolute z-10 bg-neutral-200/50 shadow-sm text-neutral-950 rounded-md p-2 bottom-12 right-4"
+  data-order="4"
 >
   <span class="font-xs font-bold">Leg shaking</span>
   <div class="flex">
@@ -50,3 +54,34 @@ import { Icon } from "astro-icon/components";
     <Icon name="star-filled" />
   </div>
 </div>
+
+<style>
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 100;
+    }
+  }
+
+  .review-container {
+    opacity: 0;
+    animation: fade-in 2s forwards;
+  }
+
+  .review-container[data-order="2"] {
+    animation-delay: 0.5s;
+  }
+  .review-container[data-order="3"] {
+    animation-delay: 1s;
+  }
+  .review-container[data-order="4"] {
+    animation-delay: 1.5s;
+  }
+
+  [data-icon="star-filled"] {
+    color: rgb(var(--color-primary));
+    font-size: 1rem;
+  }
+</style>

@@ -1,6 +1,7 @@
 ---
 import { Icon } from "astro-icon/components";
 import Header from "../components/Header.astro";
+import MiniReview from "../components/MiniReview.astro";
 ---
 
 <section class="hero-container">
@@ -55,6 +56,7 @@ import Header from "../components/Header.astro";
         </div>
       </div>
       <div class="relative">
+        <MiniReview />
         <video class="rounded-3xl shadow-2xl" playsinline autoplay muted loop>
           <source
             src="https://cdn.shopify.com/videos/c/o/v/341e7ad509c043758cc8732b056cd617.mp4"
@@ -123,10 +125,6 @@ import Header from "../components/Header.astro";
 
   [data-icon="checkmark-filled"] {
     color: rgb(var(--color-primary));
-  }
-  [data-icon="star-filled"] {
-    color: rgb(var(--color-primary));
-    font-size: 1rem;
   }
 
   video {
