@@ -1,12 +1,24 @@
 ---
 import { Image } from "astro:assets";
-import Button from "./Button.astro";
-const { title, description, body, src, alt, price, compareAt, href, cta } =
-  Astro.props;
+import { Icon } from "astro-icon/components";
+const {
+  title,
+  description,
+  body,
+  src,
+  alt,
+  price,
+  compareAt,
+  href,
+  cta,
+  length,
+  thickness,
+  skill,
+} = Astro.props;
 ---
 
 <div
-  class="overflow-hidden rounded-2xl bg-neutral-50 shadow-2xl text-gray-950 flex flex-col"
+  class="overflow-hidden rounded-2xl bg-neutral-100 shadow-2xl text-gray-950 flex flex-col"
 >
   <Image src={src} alt={alt} />
   <div class="p-4 flex flex-col flex-grow justify-between">
@@ -14,21 +26,30 @@ const { title, description, body, src, alt, price, compareAt, href, cta } =
       <span class="text-3xl font-bold">{title}</span>
       <h2 class="text-xl">{description}</h2>
       <div class="stats | mt-4">
-        <div class="flex gap-x-2">
+        <div class="flex items-center gap-x-2">
+          <Icon name="height-rounded" />
           <span class="font-bold">Insertible Length:</span>
-          <span>3.5 inches</span>
+          <span>{length}</span>
         </div>
-        <div class="flex gap-x-2">
+        <div class="flex items-center gap-x-2">
+          <Icon name="width-rounded" />
           <span class="font-bold">Thickness:</span>
-          <span>1.5 inches</span>
+          <span>{thickness}</span>
         </div>
-        <div class="flex gap-x-2">
+        <div class="flex items-center gap-x-2">
+          <Icon name="bar-chart-fill" />
           <span class="font-bold">Skill Level:</span>
-          <span>Advanced</span>
+          <span>{skill}</span>
         </div>
       </div>
       <slot />
     </div>
-    <Button href={href} cta={cta} />
+    <a href={href} class="btn shadow-xl">View Product</a>
   </div>
 </div>
+
+<style>
+  [data-icon] {
+    font-size: 20px;
+  }
+</style>

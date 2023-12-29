@@ -1,0 +1,15 @@
+---
+import { Icon } from "astro-icon/components";
+const { iconName, text } = Astro.props;
+---
+
+<div class="grid place-items-center bg-neutral-200 rounded-lg p-2 shadow-sm">
+  <Icon name={iconName} />
+  <p class="text-xs mt-2">{text}</p>
+</div>
+
+<style>
+  [data-icon] {
+    font-size: 3rem;
+  }
+</style>

@@ -6,6 +6,7 @@ import Thor from "../assets/images/thor-rotating-prostate-massager-01.jpg";
 import Tomo from "../assets/images/tomo-come-hither-prostate-massager-02.jpg";
 import Vulcan from "../assets/images/vulcan-vibrating-prostate-plug-cock-ring-4.jpg";
 import SectionTitle from "../components/SectionTitle.astro";
+import IconTile from "../components/IconTile.astro";
 ---
 
 <SectionContainer id="collection">
@@ -19,28 +20,17 @@ import SectionTitle from "../components/SectionTitle.astro";
       alt="best rotating prostate massager vibrator for male anal stimulation"
       href="https://mygiddi.com/products/thor-rotating-prostate-massager"
       cta="Meet Thor"
+      length="3.5 inches"
+      thickness="1.5 inches"
+      skill="Advanced"
     >
       <div class="icon-wrapper | grid grid-cols-3 gap-2 mt-8 text-center">
-        <div
-          class="grid place-items-center bg-neutral-100 shadow-lg rounded-lg p-2"
-        >
-          <Icon name="thor-icons-03" />
-          <p class="text-xs mt-2">3 Rotation Speeds</p>
-        </div>
-        <div
-          class="grid place-items-center bg-neutral-100 shadow-lg rounded-lg p-2"
-        >
-          <Icon name="thor-icons-02" />
-          <p class="text-xs mt-2">16 Vibration Modes</p>
-        </div>
-        <div
-          class="grid place-items-center bg-neutral-100 shadow-lg rounded-lg p-2"
-        >
-          <Icon name="thor-icons-04" />
-          <p class="text-xs mt-2">Powerful Dual Motors</p>
-        </div>
+        <IconTile iconName="3-rotation-speeds" text="3-rotation-speeds" />
+        <IconTile iconName="16-vibrations" text="16 Vibration Modes" />
+        <IconTile iconName="dual-motors" text="Powerful Dual Motors" />
       </div>
     </ProductCard>
+
     <ProductCard
       title="Tomo"
       description="Come Hither Prostate Massager"
@@ -49,28 +39,17 @@ import SectionTitle from "../components/SectionTitle.astro";
       alt="best come hither prostate massager vibrator stimulator for male anal stimulation"
       href="https://mygiddi.com/products/tomo-come-hither-prostate-massager-remote-control"
       cta="Meet Tomo"
+      length="3.5 inches"
+      thickness="1.0 inches"
+      skill="Beginner to Advanced"
     >
       <div class="icon-wrapper | grid grid-cols-3 gap-2 mt-8 text-center">
-        <div
-          class="grid place-items-center bg-neutral-100 shadow-lg rounded-lg p-2"
-        >
-          <Icon name="thor-icons-03" />
-          <p class="text-xs mt-2">3 Rotation Speeds</p>
-        </div>
-        <div
-          class="grid place-items-center bg-neutral-100 shadow-lg rounded-lg p-2"
-        >
-          <Icon name="thor-icons-02" />
-          <p class="text-xs mt-2">16 Vibration Modes</p>
-        </div>
-        <div
-          class="grid place-items-center bg-neutral-100 shadow-lg rounded-lg p-2"
-        >
-          <Icon name="thor-icons-04" />
-          <p class="text-xs mt-2">Powerful Dual Motors</p>
-        </div>
+        <IconTile iconName="3-rotation-speeds" text="3-rotation-speeds" />
+        <IconTile iconName="16-vibrations" text="16 Vibration Modes" />
+        <IconTile iconName="dual-motors" text="Powerful Dual Motors" />
       </div>
     </ProductCard>
+
     <ProductCard
       title="Vulcan"
       description="Vibrating Prostate Plug & Cockring"
@@ -79,33 +58,20 @@ import SectionTitle from "../components/SectionTitle.astro";
       alt="best rotating prostate massager vibrator for male anal stimulation"
       href="https://mygiddi.com/products/vulcan-vibrating-prostate-plug"
       cta="Meet Vulcan"
+      length="3.5 inches"
+      thickness="1.25 inches"
+      skill="Intermediate to Advanced"
     >
       <div class="icon-wrapper | grid grid-cols-3 gap-2 mt-8 text-center">
-        <div
-          class="grid place-items-center bg-neutral-100 shadow-lg rounded-lg p-2"
-        >
-          <Icon name="thor-icons-03" />
-          <p class="text-xs mt-2">3 Rotation Speeds</p>
-        </div>
-        <div
-          class="grid place-items-center bg-neutral-100 shadow-lg rounded-lg p-2"
-        >
-          <Icon name="thor-icons-02" />
-          <p class="text-xs mt-2">16 Vibration Modes</p>
-        </div>
-        <div
-          class="grid place-items-center bg-neutral-100 shadow-lg rounded-lg p-2"
-        >
-          <Icon name="thor-icons-04" />
-          <p class="text-xs mt-2">Powerful Dual Motors</p>
-        </div>
+        <IconTile iconName="3-rotation-speeds" text="3-rotation-speeds" />
+        <IconTile iconName="16-vibrations" text="16 Vibration Modes" />
+        <IconTile iconName="dual-motors" text="Powerful Dual Motors" />
       </div>
     </ProductCard>
   </div>
+  <div class="flex flex-col items-center justify-center mt-16">
+    <span class="text-2xl font-bold">Not sure?</span>
+    <p>Take our short quiz to find your match!</p>
+    <a href="" class="btn-outline mt-8">Find My Match</a>
+  </div>
 </SectionContainer>
-
-<style>
-  [data-icon] {
-    font-size: 3rem;
-  }
-</style>

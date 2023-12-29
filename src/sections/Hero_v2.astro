@@ -5,14 +5,14 @@ import Header from "../components/Header.astro";
 
 <section class="hero-container">
   <Header />
-  <div class="max-w-screen-xl mx-auto px-3 md:pt-24 pb-24">
+  <div class="max-w-screen-xl mx-auto px-3 md:pt-24 pb-16">
     <div class="grid md:grid-cols-2 gap-4 md:gap-12 w-full h-full">
       <div
         class="flex flex-col justify-center mt-4 md:mt-0 text-center md:text-left"
       >
         <div class="mb-4">
           <span class="uppercase">🥇 #1 Rated Prostate Massage</span>
-          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold">
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold">
             Unlock Mind Blowing Prostate Pleasure
           </h1>
         </div>
@@ -54,12 +54,14 @@ import Header from "../components/Header.astro";
           </div>
         </div>
       </div>
-      <video class="rounded-3xl shadow-2xl" playsinline autoplay muted loop>
-        <source
-          src="https://cdn.shopify.com/videos/c/o/v/341e7ad509c043758cc8732b056cd617.mp4"
-          type="video/mp4"
-        />
-      </video>
+      <div class="relative">
+        <video class="rounded-3xl shadow-2xl" playsinline autoplay muted loop>
+          <source
+            src="https://cdn.shopify.com/videos/c/o/v/341e7ad509c043758cc8732b056cd617.mp4"
+            type="video/mp4"
+          />
+        </video>
+      </div>
       <div
         class="md:hidden flex flex-col items-center text-center text-lg mt-4"
       >
@@ -121,6 +123,10 @@ import Header from "../components/Header.astro";
 
   [data-icon="checkmark-filled"] {
     color: rgb(var(--color-primary));
+  }
+  [data-icon="star-filled"] {
+    color: rgb(var(--color-primary));
+    font-size: 1rem;
   }
 
   video {
