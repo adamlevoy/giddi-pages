@@ -59,15 +59,17 @@ import { Icon } from "astro-icon/components";
   @keyframes fade-in {
     from {
       opacity: 0;
+      transform: scale(0);
     }
     to {
       opacity: 100;
+      transform: scale(1);
     }
   }
 
   .review-container {
     opacity: 0;
-    animation: fade-in 2s forwards;
+    animation: fade-in 1s forwards;
   }
 
   .review-container[data-order="2"] {
