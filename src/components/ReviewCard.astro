@@ -30,8 +30,16 @@ const { name, timeAgo, title, body, product, href, imgSrc, alt } = Astro.props;
     <p class="max-w-prose mb-2">
       {body}
     </p>
-    <a class="underline underline-offset-4" href={href} target="_blank"
-      >{product}</a
+    <a
+      class="underline underline-offset-4 hover:underline-offset-8"
+      href={href}
+      target="_blank">{product}</a
     >
   </div>
 </div>
+
+<style>
+  [data-icon="star-filled"] {
+    color: rgb(var(--color-primary));
+  }
+</style>
