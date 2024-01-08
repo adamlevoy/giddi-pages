@@ -1,4 +1,5 @@
 ---
+import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
 const {
   title,
@@ -28,8 +29,9 @@ const {
         <a href={href} target="_blank" class="btn">{cta}</a>
         {
           video ? (
-            <button class="open-modal | btn-outline" data-video={video}>
+            <button class="open-modal | btn-outline gap-x-2" data-video={video}>
               Watch Video
+              <Icon name="play" size={20} />
             </button>
           ) : null
         }

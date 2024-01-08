@@ -28,7 +28,7 @@
 
 @layer components {
   .btn {
-    @apply py-4 px-8 bg-primary text-gray-950 rounded-lg inline-block text-center font-bold tracking-wide uppercase transition ease-in-out duration-500;
+    @apply py-4 px-8 bg-primary text-gray-950 rounded-lg inline-flex items-center justify-center text-center font-bold tracking-wide uppercase transition ease-in-out duration-500;
   }
 
   .btn:hover {
@@ -36,7 +36,7 @@
   }
 
   .btn-outline {
-    @apply outline outline-primary outline-2 py-4 px-8 rounded-lg inline-block text-center text-primary font-bold tracking-wide uppercase transition-opacity ease-in-out duration-1000;
+    @apply outline outline-primary outline-2 py-4 px-8 rounded-lg inline-flex items-center justify-center text-center text-primary font-bold tracking-wide uppercase transition-opacity ease-in-out duration-1000;
   }
 
   .btn-outline:hover {
