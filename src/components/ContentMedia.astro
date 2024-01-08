@@ -1,6 +1,5 @@
 ---
 import { Image } from "astro:assets";
-import Button from "./Button.astro";
 const {
   title,
   description,
@@ -10,6 +9,7 @@ const {
   href,
   cta,
   reverseImg = false,
+  video,
 } = Astro.props;
 ---
 
@@ -24,7 +24,16 @@ const {
     <p class="max-w-prose mt-4">{body}</p>
     <div class="mt-8">
       <slot />
-      <a href={href} target="_blank" class="btn">{cta}</a>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href={href} target="_blank" class="btn">{cta}</a>
+        {
+          video ? (
+            <button class="open-modal | btn-outline" data-video={video}>
+              Watch Video
+            </button>
+          ) : null
+        }
+      </div>
     </div>
   </div>
   <Image

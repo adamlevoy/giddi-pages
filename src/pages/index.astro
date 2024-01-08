@@ -8,10 +8,12 @@ import LogoScroller from "../components/LogoScroller.astro";
 import Benefits from "../sections/Benefits.astro";
 import ValueProps from "../sections/ValueProps.astro";
 import Testimonials from "../sections/Testimonials.astro";
-import SectionContainer from "../components/SectionContainer.astro";
+import VideoModal from "../components/VideoModal.astro";
+import QuizCTA from "../sections/QuizCTA.astro";
 ---
 
 <Layout title="Award Winning Prostate Massagers">
+  <VideoModal />
   <HeroV2 />
   <LogoScroller />
   <Collection />
@@ -19,16 +21,6 @@ import SectionContainer from "../components/SectionContainer.astro";
   <Benefits />
   <Showcase />
   <ValueProps />
-  <SectionContainer>
-    <div class="flex flex-col items-center justify-center">
-      <span class="text-2xl font-bold">Still not sure?</span>
-      <p>Take our short quiz to find your match!</p>
-      <a
-        href="https://mygiddi.com/tools/perfect-product-finder/quiz"
-        target="_blank"
-        class="btn-outline mt-8">Find My Match</a
-      >
-    </div>
-  </SectionContainer>
+  <QuizCTA />
   <Footer />
 </Layout>

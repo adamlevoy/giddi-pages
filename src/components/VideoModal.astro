@@ -1,0 +1,82 @@
+<script>
+  const modal = document.querySelector("dialog");
+  const thorVideo = document.querySelector(".thor-video");
+  const tomoVideo = document.querySelector(".tomo-video");
+  const openButtons = document.querySelectorAll(".open-modal");
+  const closeButton = document.querySelector(".close-modal");
+  const modalVideos: NodeListOf<HTMLMediaElement> =
+    document.querySelectorAll(".modal-video");
+
+  function hideVideos() {
+    modalVideos.forEach((v) => v.classList.add("hidden"));
+  }
+
+  function pauseVideos() {
+    modalVideos.forEach((v) => v.pause());
+  }
+
+  // Escape
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      pauseVideos();
+      hideVideos();
+    }
+  });
+
+  if (!modal.hasAttribute("open")) {
+    pauseVideos();
+  }
+
+  // open modal
+  openButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      modal.showModal();
+      if (btn.getAttribute("data-video") === "thor") {
+        thorVideo.classList.remove("hidden");
+      }
+      if (btn.getAttribute("data-video") === "tomo") {
+        tomoVideo.classList.remove("hidden");
+      }
+    });
+  });
+
+  // close modal
+  closeButton.addEventListener("click", () => {
+    modalVideos.forEach((v) => v.pause());
+    modal.close();
+    hideVideos();
+  });
+</script>
+
+<dialog class="bg-neutral-900/0">
+  <div class="flex flex-col items-center gap-4">
+    <video
+      class="modal-video thor-video | max-w-[95vw] xl:max-w-[1000px] m-auto shadow-2xl rounded-3xl hidden"
+      poster="/thumbnails/thor-lifestyle-03.jpg"
+      controls
+    >
+      <source
+        src="https://cdn.shopify.com/videos/c/o/v/dad7def79a004633a3d60ff395dd50b9.mp4"
+        type="video/mp4"
+      />
+    </video>
+    <video
+      class="modal-video tomo-video | max-w-[95vw] xl:max-w-[1000px] m-auto shadow-2xl rounded-3xl hidden"
+      poster="/public/thumbnails/tomo-video-thumbnail.jpg"
+      controls
+    >
+      <source
+        src="https://cdn.shopify.com/videos/c/o/v/6e3d6bfb5cf44af58cb50da18d5c9d04.mp4"
+        type="video/mp4"
+      />
+    </video>
+    <button class="close-modal | btn">Close</button>
+  </div>
+</dialog>
+
+<style>
+  dialog::backdrop {
+    background-color: black;
+    opacity: 0.75;
+  }
+</style>
