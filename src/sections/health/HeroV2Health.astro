@@ -1,0 +1,141 @@
+---
+import { Icon } from "astro-icon/components";
+import Header from "../../components/Header.astro";
+import MiniReview from "../../components/MiniReview.astro";
+---
+
+<section class="hero-container">
+  <Header />
+  <div class="mx-auto max-w-screen-xl px-3 pb-16 md:pt-24">
+    <div class="grid h-full w-full gap-4 md:grid-cols-2 md:gap-12">
+      <div
+        class="mt-4 flex flex-col justify-center text-center md:mt-0 md:text-left"
+      >
+        <div class="mb-4">
+          <span
+            class="text-balance text-sm uppercase tracking-wider text-primary sm:text-base"
+            >🥇 #1 Doctor Recommended Prostate Massager</span
+          >
+          <h1 class="text-balance text-4xl font-bold sm:text-5xl lg:text-7xl">
+            Prostate Massager for Health
+          </h1>
+        </div>
+        <div class="hidden md:block">
+          <div class="mt-8 flex flex-col gap-y-1">
+            <div class="flex items-center gap-2">
+              <Icon name="award-trophy" />
+              <p>Award Winning Prostate Massager</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <Icon name="medical-doctor" />
+              <p>Doctor & Urologist Recommended</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <Icon name="checkmark-filled" />
+              <p>Hands Free Stimulation</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <Icon name="checkmark-filled" />
+              <p>Reduce Prostate Swelling</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <Icon name="checkmark-filled" />
+              <p>Help Treat Prostatitis</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <Icon name="checkmark-filled" />
+              <p>Increases Ejaculation & Blood Flow</p>
+            </div>
+          </div>
+          <p class="mt-4 max-w-prose">
+            Not all prostate massagers are created equal! Take our short quiz to
+            find out which of our Award-Winning prostate toys is the best match
+            for you!
+          </p>
+          <div class="mt-12">
+            <a
+              href="https://mygiddi.com/tools/perfect-product-finder/quiz"
+              target="_blank"
+              class="btn flex w-fit items-center gap-x-2 shadow-2xl"
+              ><span>Find My Match</span> <Icon name="arrow-right" /></a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="relative">
+        <MiniReview />
+        <video class="rounded-3xl shadow-2xl" playsinline autoplay muted loop>
+          <source
+            src="https://cdn.shopify.com/videos/c/o/v/341e7ad509c043758cc8732b056cd617.mp4"
+            type="video/mp4"
+          />
+        </video>
+      </div>
+      <div
+        class="mt-4 flex flex-col items-center text-center text-lg md:hidden"
+      >
+        <div>
+          <div class="flex items-center gap-2">
+            <Icon name="award-trophy" />
+            <p>Award Winning Prostate Massager</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <Icon name="medical-doctor" />
+            <p>Doctor & Urologist Recommended</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <Icon name="checkmark-filled" />
+            <p>Hands Free Stimulation</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <Icon name="checkmark-filled" />
+            <p>Reduce Prostate Swelling</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <Icon name="checkmark-filled" />
+            <p>Help Treat Prostatitis</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <Icon name="checkmark-filled" />
+            <p>Increases Ejaculation & Blood Flow</p>
+          </div>
+        </div>
+        <!-- <p class="max-w-prose text-lg mt-4">
+          Not all prostate massagers are created equal! Take our short quiz to
+          find out which of our Award-Winning prostate toys is the best match
+          for you!
+        </p> -->
+        <div class="mt-8">
+          <a
+            href="https://mygiddi.com/tools/perfect-product-finder/quiz#/"
+            target="_blank"
+            class="btn flex w-fit items-center gap-x-2 shadow-2xl"
+            ><span>Find My Match</span> <Icon name="arrow-right" /></a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero-container {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: min-content 1fr;
+    place-items: center;
+  }
+
+  [data-icon] {
+    font-size: 1.5rem;
+    color: rgb(var(--color-primary));
+  }
+
+  [data-icon="award-trophy"] {
+    color: goldenrod;
+  }
+
+  video {
+    transform: scaleX(-1);
+  }
+</style>

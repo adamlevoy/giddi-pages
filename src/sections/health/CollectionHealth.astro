@@ -1,0 +1,80 @@
+---
+import ProductCard from "../../components/ProductCard.astro";
+import SectionContainer from "../../components/SectionContainer.astro";
+import Thor from "../../assets/images/thor-rotating-prostate-massager-01.jpg";
+import Tomo from "../../assets/images/tomo-come-hither-prostate-massager-02.jpg";
+import Vulcan from "../../assets/images/vulcan-vibrating-prostate-plug-cock-ring-4.jpg";
+import SectionTitle from "../../components/SectionTitle.astro";
+import IconTile from "../../components/IconTile.astro";
+---
+
+<SectionContainer id="collection">
+  <SectionTitle heading="Award-Winning Prostate Massagers" />
+  <div class="mt-8 grid gap-8 lg:grid-cols-3">
+    <ProductCard
+      title="Tomo"
+      description="Come Hither Prostate Massager"
+      body="Tomo's life-like come hither motion combined with deep vibration delivers dual sensations for mind-blowing internal and external massage. Anatomically designed shape remains in-place for hands-free stimulation and is perfect size for beginner to advanced."
+      src={Tomo}
+      alt="best come hither prostate massager vibrator stimulator for male anal stimulation"
+      href="https://mygiddi.com/products/tomo-come-hither-prostate-massager-remote-control"
+      cta="Meet Tomo"
+      length="3.5 in / 9.0 cm"
+      thickness="1.0 in / 3.0 cm"
+      skill="Beginner to Advanced"
+    >
+      <div class="icon-wrapper | mt-8 grid grid-cols-3 gap-2 text-center">
+        <IconTile iconName="come-hither" text="Come Hither Motion" />
+        <IconTile iconName="9-vibrations" text="9 Vibration Modes" />
+        <IconTile iconName="dual-motors" text="Powerful Dual Motors" />
+      </div>
+    </ProductCard>
+
+    <ProductCard
+      title="Thor"
+      description="360° Rotating Prostate Massager"
+      body="Thor's 360° rotating & vibrating heads deliver multi-sensational prostate stimulation for intense internal and external massage. Anatomical shape and size fits snugly, staying in-place hands-free while giving a sensual feeling of fullness inside you."
+      src={Thor}
+      alt="best rotating prostate massager vibrator for male anal stimulation"
+      href="https://mygiddi.com/products/thor-rotating-prostate-massager"
+      cta="Meet Thor"
+      length="4.0 in / 10.0 cm"
+      thickness="1.7 in / 4.3 cm"
+      skill="Advanced"
+    >
+      <div class="icon-wrapper | mt-8 grid grid-cols-3 gap-2 text-center">
+        <IconTile iconName="3-rotation-speeds" text="3 Rotation Speeds" />
+        <IconTile iconName="16-vibrations" text="16 Vibration Modes" />
+        <IconTile iconName="dual-motors" text="Powerful Dual Motors" />
+      </div>
+    </ProductCard>
+
+    <ProductCard
+      title="Vulcan"
+      description="Vibrating Prostate Plug & Cockring"
+      body="Our latest addition to the family, Vulcan is our most powerful vibrating plug and is designed for comfortable extended wear. Unique penis and scrotum rings restrict blood flow, leading to stronger, longer-lasting erections."
+      src={Vulcan}
+      alt="best rotating prostate massager vibrator for male anal stimulation"
+      href="https://mygiddi.com/products/vulcan-vibrating-prostate-plug"
+      cta="Meet Vulcan"
+      length="4.5 in / 11.5 cm"
+      thickness="1.25 in / 3.2 cm"
+      skill="Intermediate to Advanced"
+    >
+      <div class="icon-wrapper | mt-8 grid grid-cols-3 gap-2 text-center">
+        <IconTile iconName="harness" text="Flexible Cock Harness" />
+        <IconTile iconName="9-vibrations" text="9 Vibration Modes" />
+        <IconTile iconName="waterproof" text="Waterproof Design" />
+      </div>
+    </ProductCard>
+  </div>
+  <div class="mt-16 flex flex-col items-center justify-center">
+    <span class="text-2xl font-bold">Not sure?</span>
+    <p>Take our short quiz to find your match!</p>
+    <a
+      href="https://mygiddi.com/tools/perfect-product-finder/quiz"
+      target="_blank"
+      class="btn-outline mt-8">Find My Match</a
+    >
+  </div>
+</SectionContainer>
