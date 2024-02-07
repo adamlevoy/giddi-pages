@@ -31,7 +31,7 @@ const { name, timeAgo, title, body, product, href, imgSrc, alt } = Astro.props;
       {body}
     </p>
     <a
-      class="underline underline-offset-4 hover:underline-offset-8"
+      class="text-purple-700 underline underline-offset-4 hover:underline-offset-8"
       href={href}
       target="_blank">{product}</a
     >
@@ -43,7 +43,7 @@ const { name, timeAgo, title, body, product, href, imgSrc, alt } = Astro.props;
     color: rgb(var(--color-primary));
   }
 
-  a {
+  /* a {
     color: goldenrod;
-  }
+  } */
 </style>
