@@ -1,0 +1,18 @@
+---
+import SectionContainer from "../components/SectionContainer.astro";
+import SectionTitle from "../components/SectionTitle.astro";
+import SignupForm from "../components/SignupForm";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <SectionContainer>
+    <div>
+      <SectionTitle
+        heading="Get Guide & 15% Off"
+        subhead="Sign-up and get our Beginner's Guide to Prostate Massage along with 15% off your order"
+      />
+      <SignupForm client:visible />
+    </div>
+  </SectionContainer>
+</Layout>

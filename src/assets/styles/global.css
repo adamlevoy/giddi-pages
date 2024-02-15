@@ -20,26 +20,12 @@
 
   html {
     font-family: system-ui, sans-serif;
-    background: rgb(19, 21, 26);
+    background: #13151a;
     color: rgb(var(--color-white));
     scroll-behavior: smooth;
   }
-}
 
-@layer components {
   .btn {
-    @apply py-4 px-8 bg-primary text-gray-950 rounded-lg inline-flex items-center justify-center text-center font-bold tracking-wide uppercase transition ease-in-out duration-500;
-  }
-
-  .btn:hover {
-    background-color: #bfaf7a;
-  }
-
-  .btn-outline {
-    @apply outline outline-primary outline-2 py-4 px-8 rounded-lg inline-flex items-center justify-center text-center text-primary font-bold tracking-wide uppercase transition-opacity ease-in-out duration-1000;
-  }
-
-  .btn-outline:hover {
-    @apply outline-primary/75 text-primary/75;
+    @apply uppercase;
   }
 }
