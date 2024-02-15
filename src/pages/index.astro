@@ -10,6 +10,9 @@ import ValueProps from "../sections/ValueProps.astro";
 import Testimonials from "../sections/Testimonials.astro";
 import VideoModal from "../components/VideoModal.astro";
 import QuizCTA from "../sections/QuizCTA.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import SignupForm from "../components/SignupForm";
+import SectionTitle from "../components/SectionTitle.astro";
 ---
 
 <Layout title="Award Winning Prostate Massagers">
@@ -18,6 +21,15 @@ import QuizCTA from "../sections/QuizCTA.astro";
   <LogoScroller />
   <Collection />
   <Testimonials />
+  <SectionContainer>
+    <div>
+      <SectionTitle
+        heading="Get Guide & 15% Off"
+        subhead="Sign-up and get our Beginner's Guide to Prostate Massage along with 15% off your order"
+      />
+      <SignupForm />
+    </div>
+  </SectionContainer>
   <Benefits />
   <Showcase />
   <ValueProps />
