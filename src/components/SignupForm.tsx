@@ -20,7 +20,7 @@ export default function SignupForm() {
   return (
     <form className="flex justify-center gap-x-2" onSubmit={handleSubmit}>
       <input
-        className="input"
+        className="input text-gray-400"
         type="email"
         id="email"
         name="email"
