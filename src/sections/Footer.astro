@@ -3,17 +3,19 @@ import { Image } from "astro:assets";
 import GIDDI from "../assets/logos/giddi-logotype-white.svg";
 ---
 
-<footer class="py-8 flex flex-col gap-y-4 items-center justify-center">
-  <div class="max-w-[120px] mx-auto">
+<footer
+  class="flex flex-col items-center justify-center gap-y-4 bg-gray-950 py-8"
+>
+  <div class="mx-auto max-w-[120px]">
     <Image src={GIDDI} alt="GIDDI logo white" />
   </div>
   <div class="flex gap-4">
     <a
-      class="text-gray-400 text-xs underline"
+      class="text-xs text-gray-400 underline"
       href="https://mygiddi.com/policies/privacy-policy">Privacy Policy</a
     >
     <a
-      class="text-gray-400 text-xs underline"
+      class="text-xs text-gray-400 underline"
       href="https://mygiddi.com/policies/terms-of-service">Terms of service</a
     >
   </div>

@@ -3,7 +3,7 @@ import { Icon } from "astro-icon/components";
 ---
 
 <div
-  class="review-container | absolute z-10 bg-neutral-200/50 shadow-sm text-neutral-950 rounded-md p-2 top-8 left-8"
+  class="review-container | absolute left-8 top-8 z-10 rounded-md bg-neutral-200/50 p-2 text-neutral-950 shadow-sm"
   data-order="1"
 >
   <span class="font-xs font-bold">OMG!</span>
@@ -16,7 +16,7 @@ import { Icon } from "astro-icon/components";
   </div>
 </div>
 <div
-  class="review-container | absolute z-10 bg-neutral-200/50 shadow-sm text-neutral-950 rounded-md p-2 top-40 left-4"
+  class="review-container | absolute left-4 top-40 z-10 rounded-md bg-neutral-200/50 p-2 text-neutral-950 shadow-sm"
   data-order="2"
 >
   <span class="font-xs font-bold">I love this thing!</span>
@@ -29,7 +29,7 @@ import { Icon } from "astro-icon/components";
   </div>
 </div>
 <div
-  class="review-container | absolute z-10 bg-neutral-200/50 shadow-sm text-neutral-950 rounded-md p-2 top-12 right-8"
+  class="review-container | absolute right-8 top-12 z-10 rounded-md bg-neutral-200/50 p-2 text-neutral-950 shadow-sm"
   data-order="3"
 >
   <span class="font-xs font-bold">Best toy ever!</span>
@@ -42,7 +42,7 @@ import { Icon } from "astro-icon/components";
   </div>
 </div>
 <div
-  class="review-container | md:hidden xl:block absolute z-10 bg-neutral-200/50 shadow-sm text-neutral-950 rounded-md p-2 bottom-12 right-4"
+  class="review-container | absolute bottom-12 right-4 z-10 rounded-md bg-neutral-200/50 p-2 text-neutral-950 shadow-sm md:hidden xl:block"
   data-order="4"
 >
   <span class="font-xs font-bold">Leg shaking</span>
@@ -55,7 +55,7 @@ import { Icon } from "astro-icon/components";
   </div>
 </div>
 <div
-  class="review-container | absolute z-10 bg-neutral-200/50 shadow-sm text-neutral-950 rounded-md p-2 bottom-4 left-4 sm:bottom-16 sm:left-10 md:hidden xl:block"
+  class="review-container | absolute bottom-4 left-4 z-10 rounded-md bg-neutral-200/50 p-2 text-neutral-950 shadow-sm sm:bottom-16 sm:left-10 md:hidden xl:block"
   data-order="5"
 >
   <span class="font-xs font-bold">Brilliant toy!</span>
@@ -68,7 +68,7 @@ import { Icon } from "astro-icon/components";
   </div>
 </div>
 <div
-  class="hidden sm:block md:hidden lg:block review-container | absolute z-10 bg-neutral-200/50 shadow-sm text-neutral-950 rounded-md p-2 top-40 right-32"
+  class="review-container | absolute right-32 top-40 z-10 hidden rounded-md bg-neutral-200/50 p-2 text-neutral-950 shadow-sm sm:block md:hidden lg:block"
   data-order="6"
 >
   <span class="font-xs font-bold">I still feel it</span>
@@ -81,7 +81,7 @@ import { Icon } from "astro-icon/components";
   </div>
 </div>
 <div
-  class="hidden sm:block md:hidden lg:block review-container | absolute z-10 bg-neutral-200/50 shadow-sm text-neutral-950 rounded-md p-2 top-72 right-12"
+  class="review-container | absolute right-12 top-72 z-10 hidden rounded-md bg-neutral-200/50 p-2 text-neutral-950 shadow-sm sm:block md:hidden lg:block"
   data-order="7"
 >
   <span class="font-xs font-bold">Found my p-spot</span>
@@ -94,7 +94,7 @@ import { Icon } from "astro-icon/components";
   </div>
 </div>
 <div
-  class="hidden sm:block md:hidden lg:block review-container | absolute z-10 bg-neutral-200/50 shadow-sm text-neutral-950 rounded-md p-2 top-72 left-12"
+  class="review-container | absolute left-12 top-72 z-10 hidden rounded-md bg-neutral-200/50 p-2 text-neutral-950 shadow-sm sm:block md:hidden lg:block"
   data-order="7"
 >
   <span class="font-xs font-bold">Super O achieved</span>
@@ -107,7 +107,7 @@ import { Icon } from "astro-icon/components";
   </div>
 </div>
 <div
-  class="hidden sm:block md:hidden lg:block review-container | absolute z-10 bg-neutral-200/50 shadow-sm text-neutral-950 rounded-md p-2 top-6 left-64"
+  class="review-container | absolute left-64 top-6 z-10 hidden rounded-md bg-neutral-200/50 p-2 text-neutral-950 shadow-sm sm:block md:hidden lg:block"
   data-order="8"
 >
   <span class="font-xs font-bold">I'm hooked on it</span>
@@ -120,7 +120,7 @@ import { Icon } from "astro-icon/components";
   </div>
 </div>
 <div
-  class="hidden sm:block md:hidden xl:block review-container | absolute z-10 bg-neutral-200/50 shadow-sm text-neutral-950 rounded-md p-2 bottom-10 left-64"
+  class="review-container | absolute bottom-10 left-64 z-10 hidden rounded-md bg-neutral-200/50 p-2 text-neutral-950 shadow-sm sm:block md:hidden xl:block"
   data-order="9"
 >
   <span class="font-xs font-bold">Never came so much</span>
@@ -170,7 +170,7 @@ import { Icon } from "astro-icon/components";
   }
 
   [data-icon="star-filled"] {
-    color: rgb(var(--color-primary));
+    color: var(--color-primary);
     font-size: 1rem;
   }
 </style>

@@ -4,8 +4,10 @@
 
 @layer base {
   :root {
-    --color-primary: 215 194 144;
+    --color-primary: #d3c396;
     --color-white: 250 250 250;
+    --color-purple-300: #a78bfa;
+    --color-purple: #5b21b6;
 
     --accent: 136, 58, 234;
     --accent-light: 224, 204, 250;

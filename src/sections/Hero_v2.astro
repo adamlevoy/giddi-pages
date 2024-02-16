@@ -12,16 +12,18 @@ import MiniReview from "../components/MiniReview.astro";
         class="mt-4 flex flex-col justify-center text-center md:mt-0 md:text-left"
       >
         <div class="mb-4">
-          <span class="uppercase text-primary">#1 Rated Prostate Massager</span>
+          <span class="uppercase text-primary/70"
+            >#1 Rated Prostate Massager</span
+          >
           <h1 class="text-4xl font-bold sm:text-5xl lg:text-7xl">
-            Mind Blowing Prostate Pleasure
+            Mind Blowing <span class="text-primary">Prostate Pleasure</span>
           </h1>
         </div>
         <div class="hidden md:block">
           <div class="mt-8 flex flex-col gap-y-1">
             <div class="flex items-center gap-2">
               <Icon name="award-trophy" />
-              <p>Award Winning Prostate Massager</p>
+              <p>Award Winning Prostate Massagers</p>
             </div>
             <div class="flex items-center gap-2">
               <Icon name="checkmark-filled" />
@@ -40,7 +42,7 @@ import MiniReview from "../components/MiniReview.astro";
               <p>Longer-lasting Erections</p>
             </div>
           </div>
-          <p class="mt-8 max-w-prose">
+          <p class="mt-8 max-w-prose text-balance">
             Meet our lineup of award-winning prostate toys and unlock mind
             blowing, hands free prostate orgasms and the may wellness benefits
             of prostate massage.
@@ -49,7 +51,8 @@ import MiniReview from "../components/MiniReview.astro";
             <a
               href="#collection"
               class="btn btn-primary btn-lg flex w-fit items-center gap-x-2 shadow-2xl"
-              ><span>See the lineup</span> <Icon name="arrow-right" /></a
+              ><span>see award winners</span>
+              <Icon name="arrow-right" /></a
             >
           </div>
         </div>
@@ -69,7 +72,7 @@ import MiniReview from "../components/MiniReview.astro";
         <div>
           <div class="flex items-center gap-2">
             <Icon name="award-trophy" />
-            <p>Award Winning Prostate Massager</p>
+            <p>Award Winning Prostate Massagers</p>
           </div>
           <div class="flex items-center gap-2">
             <Icon name="checkmark-filled" />
@@ -88,15 +91,16 @@ import MiniReview from "../components/MiniReview.astro";
             <p>Longer-lasting Erections</p>
           </div>
         </div>
-        <p class="mt-4 max-w-prose text-lg">
+        <p class="mt-4 max-w-prose text-balance text-lg">
           Meet our lineup of award-winning prostate toys and unlock mind
           blowing, hands free prostate orgasms.
         </p>
         <div class="mt-8">
           <a
             href="#collection"
-            class="btn btn-primary btn-lg flex w-fit items-center gap-x-2 shadow-2xl"
-            ><span>See the lineup</span> <Icon name="arrow-right" /></a
+            class="btn btn-primary btn-lg flex w-fit items-center gap-x-2 text-left shadow-2xl"
+            ><span>see award winners</span>
+            <Icon name="arrow-right" /></a
           >
         </div>
       </div>
@@ -121,7 +125,7 @@ import MiniReview from "../components/MiniReview.astro";
   }
 
   [data-icon="checkmark-filled"] {
-    color: rgb(var(--color-primary));
+    color: var(--color-purple-300);
   }
 
   video {
