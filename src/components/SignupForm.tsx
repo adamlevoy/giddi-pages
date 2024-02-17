@@ -8,6 +8,7 @@ export default function SignupForm() {
     const form = e.target as HTMLFormElement;
     try {
       const formData = new FormData(form);
+      const email = formData.get("email");
       const response = await fetch("/api/klaviyo", {
         method: "POST",
         body: formData
@@ -16,6 +17,14 @@ export default function SignupForm() {
       if (data.message) {
         setIsSubscribed(true);
         form.reset();
+        // @ts-ignore
+        klaviyo.push([
+          "identify",
+          {
+            // Change the line below to dynamically print the user's email.
+            email: email
+          }
+        ]);
       }
     } catch (error) {
       console.log(error);
