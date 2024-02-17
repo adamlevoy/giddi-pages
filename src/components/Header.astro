@@ -3,6 +3,102 @@ import { Image } from "astro:assets";
 import GIDDI from "../assets/logos/giddi-logotype-white.svg";
 ---
 
-<header class="w-full py-6">
-  <Image src={GIDDI} alt="giddi logo" class="w-[100px] md:w-[150px] mx-auto" />
+<header class="flex w-full max-w-screen-xl justify-between">
+  <div class="navbar">
+    <div class="navbar-start">
+      <div class="dropdown">
+        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            ><path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h8m-8 6h16"></path></svg
+          >
+        </div>
+        <ul
+          tabindex="0"
+          class="menu dropdown-content menu-sm z-[100] mt-3 w-[80vw] rounded-box bg-gray-950 p-2 text-primary shadow"
+        >
+          <li><a href="#collection">Lineup</a></li>
+          <li>
+            <a>Massagers</a>
+            <ul class="p-2">
+              <li>
+                <a href="#thor" class="text-neutral-content"
+                  ><span class="font-bold">Thor</span><span class=""
+                    >Rotating & Vibrating</span
+                  ></a
+                >
+              </li>
+              <li>
+                <a href="#tomo" class="text-neutral-content"
+                  ><span class="font-bold">Tomo</span><span class=""
+                    >Come Hither & Vibrating</span
+                  ></a
+                >
+              </li>
+              <li>
+                <a href="#vulcan" class="text-neutral-content"
+                  ><span class="font-bold">Vulcan</span><span class=""
+                    >Vibrating & Cock Ring</span
+                  ></a
+                >
+              </li>
+            </ul>
+          </li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#benefits">Benefits</a></li>
+        </ul>
+      </div>
+      <Image src={GIDDI} alt="giddi logo" class="w-[100px] md:w-[150px]" />
+    </div>
+    <div class="navbar-center hidden lg:flex">
+      <ul class="menu menu-horizontal z-50 px-1 text-primary">
+        <li><a href="#collection">Lineup</a></li>
+        <li>
+          <details>
+            <summary>Massagers</summary>
+            <ul class="w-64 bg-gray-950 p-2">
+              <li>
+                <a href="#thor" class="text-neutral-content"
+                  ><span class="font-bold">Thor</span><span class=""
+                    >Rotating & Vibrating</span
+                  ></a
+                >
+              </li>
+              <li>
+                <a href="#tomo" class="text-neutral-content"
+                  ><span class="font-bold">Tomo</span><span class=""
+                    >Come Hither & Vibrating</span
+                  ></a
+                >
+              </li>
+              <li>
+                <a href="#vulcan" class="text-neutral-content"
+                  ><span class="font-bold">Vulcan</span><span class=""
+                    >Vibrating & Cock Ring</span
+                  ></a
+                >
+              </li>
+            </ul>
+          </details>
+        </li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#benefits">Benefits</a></li>
+      </ul>
+    </div>
+    <div class="navbar-end">
+      <a
+        href="https://mygiddi.com/tools/perfect-product-finder/quiz"
+        target="_blank"
+        class="btn btn-outline btn-accent btn-sm sm:btn-md">find my match</a
+      >
+    </div>
+  </div>
 </header>

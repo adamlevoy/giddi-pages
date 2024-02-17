@@ -10,11 +10,12 @@ const {
   href,
   cta,
   reverseImg = false,
-  video
+  video,
+  id
 } = Astro.props;
 ---
 
-<div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
+<div id={id} class="grid grid-cols-1 gap-8 lg:grid-cols-2">
   <div
     class={`${reverseImg ? "md:order-2" : ""}
     flex flex-col justify-center p-6 md:p-12
