@@ -16,7 +16,7 @@ const { name, timeAgo, title, body, product, href, imgSrc, alt } = Astro.props;
     <p class="font-bold">{name}</p>
     <Icon name="checkmark-filled" size={18} />
   </div>
-  <p class="text-xs font-light">Verified Customer</p>
+  <p class="text-xs font-light italic text-gray-800">Verified Customer</p>
   <div class="mt-2 flex items-center gap-x-1">
     <Icon name="star-filled" size={20} />
     <Icon name="star-filled" size={20} />
@@ -39,8 +39,12 @@ const { name, timeAgo, title, body, product, href, imgSrc, alt } = Astro.props;
 </div>
 
 <style>
+  [data-icon="checkmark-filled"] {
+    color: var(--color-purple);
+  }
+
   [data-icon="star-filled"] {
-    color: rgb(var(--color-primary));
+    color: var(--color-primary);
   }
 
   /* a {

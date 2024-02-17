@@ -3,18 +3,22 @@ import { Icon } from "astro-icon/components";
 const { title, body, icon, size } = Astro.props;
 ---
 
-<article>
+<article class="flex h-full flex-col border-l-[5px] border-gray-400 pl-4">
   <Icon name={icon} size={size} />
-  <h3 class="text-xl font-bold tracking-wide mt-4">{title}</h3>
-  <p class="max-w-prose mt-2">{body}</p>
+  <h3 class="mt-4 text-xl font-bold tracking-wide">{title}</h3>
+  <p class="mt-2 max-w-prose text-neutral-content">{body}</p>
 </article>
 
 <style>
-  article {
+  /* article {
     display: flex;
     flex-direction: column;
     height: 100%;
     padding-left: 1rem;
-    border-left: 5px solid rgb(var(--color-primary));
+    border-left: 5px solid var(--color-primary);
+  } */
+
+  [data-icon] {
+    color: var(--color-primary);
   }
 </style>

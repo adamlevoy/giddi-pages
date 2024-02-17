@@ -1,0 +1,58 @@
+---
+import { Image } from "astro:assets";
+import SectionContainer from "../components/SectionContainer.astro";
+import SectionTitle from "../components/SectionTitle.astro";
+import SignupForm from "../components/SignupForm";
+import Guide from "../assets/images/pm-guide-cover-v2.png";
+---
+
+<section class="bg-gray-950 py-20">
+  <div class="mx-auto grid max-w-screen-xl gap-y-20 px-3 md:grid-cols-2">
+    <div
+      class="order-2 flex flex-col items-center justify-center text-center md:order-1"
+    >
+      <div class="relative mb-10">
+        <span
+          class="before:-z-1 xs:text-4xl relative z-10 mb-4 inline-block text-3xl font-bold before:absolute before:bottom-0 before:left-0 before:-z-10 before:block before:h-[12px] before:w-full before:skew-x-[25deg] before:bg-accent"
+          >Get Guide & 15% Off</span
+        >
+        <p
+          class="max-w-prose text-balance text-xl italic text-neutral-content sm:text-2xl"
+        >
+          Sign-up to get our <span class="font-bold"
+            >Beginner's Guide to Prostate Massage</span
+          >
+           and 15% off your order
+        </p>
+      </div>
+      <SignupForm client:visible />
+    </div>
+    <div class="order-1 mx-auto max-w-[400px] px-4 md:order-2 md:px-0">
+      <Image
+        class="-rotate-3 rounded-lg shadow-2xl shadow-primary/70"
+        src={Guide}
+        alt="Beginner's Guide to Prostate Massage"
+      />
+    </div>
+  </div>
+</section>
+
+<style>
+  /* span {
+    position: relative;
+    padding: 0;
+    margin: 0;
+  }
+
+  span::after {
+    content: "";
+    width: 100%;
+    height: 12px;
+    background: purple;
+    position: absolute;
+    z-index: -1;
+    bottom: 2px;
+    left: 0;
+    transform: skewX(25deg);
+  } */
+</style>

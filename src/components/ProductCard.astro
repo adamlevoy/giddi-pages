@@ -13,14 +13,33 @@ const {
   cta,
   length,
   thickness,
-  skill,
+  skill
 } = Astro.props;
+import BestChoice from "../assets/images/best-choice-award.png";
+import BestValue from "../assets/images/best-value-award.png";
 ---
 
 <div
   class="flex flex-col overflow-hidden rounded-2xl bg-base-100 text-gray-950 shadow-2xl"
 >
-  <Image src={src} alt={alt} />
+  <div class="relative">
+    {
+      title === "Thor" ? (
+        <Image
+          class="shad absolute right-4 top-4 size-[25%]"
+          src={BestChoice}
+          alt="Best Prostate Massager Award"
+        />
+      ) : title === "Tomo" ? (
+        <Image
+          class="shad absolute right-4 top-4 size-[25%]"
+          src={BestValue}
+          alt="Top Rated Prostate Massager Award"
+        />
+      ) : null
+    }
+    <Image src={src} alt={alt} />
+  </div>
   <div class="flex flex-grow flex-col justify-between p-4">
     <div class="mb-8">
       <span class="text-3xl font-bold">{title}</span>
@@ -53,6 +72,6 @@ const {
 <style>
   [data-icon] {
     font-size: 20px;
-    color: #7429c6;
+    color: var(--color-purple);
   }
 </style>
