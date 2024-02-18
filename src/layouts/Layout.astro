@@ -23,11 +23,15 @@ const { title } = Astro.props;
       async
       src="https://www.googletagmanager.com/gtag/js?id=AW-834813437"></script>
     <script>
+      // @ts-expect-error
       window.dataLayer = window.dataLayer || [];
       function gtag() {
+        // @ts-expect-error
         dataLayer.push(arguments);
       }
+      // @ts-expect-error
       gtag("js", new Date());
+      // @ts-expect-error
       gtag("config", "AW-834813437", { allow_enhanced_conversions: true });
     </script>
 

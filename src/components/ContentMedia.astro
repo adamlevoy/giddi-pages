@@ -10,17 +10,21 @@ const {
   href,
   cta,
   reverseImg = false,
-  video
+  video,
+  id
 } = Astro.props;
 ---
 
-<div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
+<div id={id} class="grid grid-cols-1 gap-8 lg:grid-cols-2">
   <div
     class={`${reverseImg ? "md:order-2" : ""}
     flex flex-col justify-center p-6 md:p-12
     `}
   >
-    <span class="text-4xl font-bold">{title}</span>
+    <span
+      class="before:-z-1 relative z-10 mb-4 inline-block self-start text-3xl font-bold before:absolute before:bottom-0 before:left-0 before:-z-10 before:block before:h-[12px] before:w-full before:skew-x-[25deg] before:bg-secondary xs:text-4xl"
+      >{title}</span
+    >
     <h2 class="text-3xl italic text-primary">{description}</h2>
     <p class="mt-4 max-w-prose text-neutral-content">{body}</p>
     <div class="mt-8">

@@ -1,8 +1,50 @@
 ---
 import { Image } from "astro:assets";
 import GIDDI from "../assets/logos/giddi-logotype-white.svg";
+import { Icon } from "astro-icon/components";
 ---
 
-<header class="w-full py-6">
-  <Image src={GIDDI} alt="giddi logo" class="w-[100px] md:w-[150px] mx-auto" />
+<header class="sticky top-0 z-50 flex w-full justify-between bg-neutral/85">
+  <div class="navbar mx-auto max-w-screen-xl">
+    <div class="navbar-start">
+      <a href="#top">
+        <Image src={GIDDI} alt="giddi logo" class="w-[100px] sm:w-[150px]" />
+      </a>
+    </div>
+    <div class="navbar-end space-x-6">
+      <div class="indicator">
+        <span
+          id="signup-indicator"
+          class="badge indicator-item badge-accent badge-xs"></span>
+        <div id="gift-icon" class="grid cursor-pointer place-items-center">
+          <Icon name="gift" />
+        </div>
+      </div>
+      <a
+        href="https://mygiddi.com/tools/perfect-product-finder/quiz"
+        target="_blank"
+        class="btn btn-accent btn-sm sm:btn-md">take quiz</a
+      >
+    </div>
+  </div>
 </header>
+
+<script>
+  const signupModalButton = document.getElementById("gift-icon");
+  const signupIndicator = document.getElementById("signup-indicator");
+  function handleClick() {
+    // @ts-expect-error
+    window._klOnsite = window._klOnsite || [];
+    // @ts-expect-error
+    window._klOnsite.push(["openForm", "TsgHmt"]);
+    signupIndicator.classList.add("hidden");
+  }
+  signupModalButton.addEventListener("click", handleClick);
+</script>
+
+<style>
+  [data-icon] {
+    color: var(--color-primary);
+    font-size: 1.5rem;
+  }
+</style>

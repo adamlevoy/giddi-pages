@@ -69,13 +69,19 @@ import IconTile from "../components/IconTile.astro";
       </div>
     </ProductCard>
   </div>
-  <div class="mt-16 flex flex-col items-center justify-center">
-    <span class="text-2xl font-bold">Not sure?</span>
-    <p>Take our short quiz to find your match!</p>
+  <div class="mt-16 flex flex-col items-center justify-center text-center">
+    <span
+      class="before:-z-1 relative z-10 mb-4 inline-block text-3xl font-bold before:absolute before:bottom-0 before:left-0 before:-z-10 before:block before:h-[12px] before:w-full before:skew-x-[25deg] before:bg-secondary xs:text-4xl"
+      >Not sure?</span
+    >
+    <p class="max-w-prose text-balance text-neutral-content">
+      Take our short quiz to find out which of our award winning toys is best
+      for you!
+    </p>
     <a
       href="https://mygiddi.com/tools/perfect-product-finder/quiz"
       target="_blank"
-      class="btn btn-outline btn-primary mt-8">Find My Match</a
+      class="btn btn-outline btn-accent mt-8">take quiz</a
     >
   </div>
 </SectionContainer>
